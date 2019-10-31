@@ -1,1 +1,766 @@
-/* You can add global styles to this file, and also import other style files */
+/*///////////////////////////////////////////////////////////////////////////////////
+
+	Theme Name: Seo Company
+	Description: The Seo Company v1.0
+	Author: Diego Velázquez Rabasa - Templune
+	Author Personal Website: http://templune.com
+	Author Behance Profile: https://www.behance.net/diegovr7
+	Author Dribbble Profile: https://dribbble.com/diegovr7
+	Author Envato Profile: https://themeforest.net/user/diegovr7
+	Version: 1.0
+
+	External Resources:
+	Bootstrap 4
+	Google Fonts 
+	Ionic Icons
+
+	*This Html Theme is royalty free for use in personal and commercial projects with 
+	a couple of restrictions.
+
+	Publications
+	You are welcome to republish this Html Theme on condition that you link back to
+	https://www.behance.net/gallery/67279127/The-Seo-Company-Free-PSD-Template 
+	and you should not provide the assets for direct download from your website.
+
+	Prohibitions
+	You do not have rights to redistribute, resell, lease, license, sub-license or offer
+	this resource to any third party «as is». If you want to use this resource as a part
+	of a product intended to be sold via any marketplace, please contact the author 
+	templune@gmail.com of the freebie to get an extended license.
+
+/////////////////////////////////////////////////////////////////////////////////*/
+
+/* /////////////////////////////
+
+	1. Basic Styles
+	2. Navbar
+	3. Buttons
+	4. Hero
+	5. Marketing
+	6. Testimonials
+	7. Pricing
+	8. Call to Action
+	9. Footer
+	10. Media Queries
+
+   //////////////////////////*/
+
+
+   body {
+	font-family: 'Roboto', sans-serif;
+	color: #3a3f52;
+}
+
+h2 {
+	font-size: 44px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 25px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: .05em;
+	color: #53627C;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+b {
+	font-weight: 700;
+}
+
+section {
+	padding: 100px 0px;
+}
+
+.title-block {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.title-block p {
+	font-size: 20px;
+	font-weight: 300;
+	color: #8da2b5;
+	margin-bottom: 0px;
+}
+
+.divider {
+    position:relative;
+	padding: 2rem 0 0;
+    margin: 2rem 0 0;
+    border-top: 1px solid #3c3f45;
+}
+
+.divider-light {
+	padding: 2rem 0 0;
+    margin: 2rem 0 0;
+	border-top: 1px solid #edf1f2
+}
+
+/* ==============================================
+   2. Navbar 
+===============================================*/
+
+.custom-navbar {
+	position: fixed !important;
+    top: auto;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    max-width: 100%;
+    border-bottom: 1px solid #e2e0df;
+    background-color: #f9f8f7;
+    line-height: 1.5;
+    height: 90px;
+}
+
+.hootsuite-logo {
+
+    height: 30px;
+    width: 125px;
+    background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNjAuNSA4NyI+PHBhdGggZD0iTTg4LjE5IDE3Ljc1djE2LjcxaDE2LjE0VjE3Ljc1aDkuNzd2NDMuMzNoLTkuNzdWNDMuMDFIODguMTl2MTguMDdoLTkuNzdWMTcuNzVoOS43N3ptNDUuOTIgMzcuMDNjMy44NiAwIDYuMjQtMy44IDYuMjQtOS40NSAwLTQuNjMtMS44LTkuMzktNi4yNC05LjM5LTQuNjMgMC02LjQzIDQuNzYtNi40MyA5LjQ1IDAgNS4zMyAyLjI1IDkuMzkgNi4zNiA5LjM5em0tLjE5IDdjLTkuMTkgMC0xNi4yNy02LTE2LjI3LTE2LjJzNi42OS0xNi42NSAxNi44NC0xNi42NWM5LjU4IDAgMTYgNi42MiAxNiAxNi4xNCAwIDExLjQ0LTguMTYgMTYuNzEtMTYuNTIgMTYuNzF6bTM2LjMyLTdjMy44NiAwIDYuMjQtMy44IDYuMjQtOS40NSAwLTQuNjMtMS44LTkuMzktNi4yNC05LjM5LTQuNjMgMC02LjQzIDQuNzYtNi40MyA5LjQ1IDAgNS4zMyAyLjI1IDkuMzkgNi4zNyA5LjM5em0tLjE5IDdjLTkuMTkgMC0xNi4yNi02LTE2LjI2LTE2LjJzNi42OS0xNi42NSAxNi44NC0xNi42NWM5LjU4IDAgMTYgNi42MiAxNiAxNi4xNCAwIDExLjQ0LTguMTcgMTYuNzEtMTYuNTMgMTYuNzF6bTIwLjE1LTI0Ljk0djEyLjkyYzAgNC40NC45IDcuNDYgMi43IDkuMzJhMTAuNDEgMTAuNDEgMCAwIDAgNy4zOSAyLjcgMjAuNTggMjAuNTggMCAwIDAgNi4zLS44NGwtLjA3LTcuMzlhMTEuODUgMTEuODUgMCAwIDEtMi44OS4yNmMtMi44OSAwLTMuODYtMS43NC0zLjg2LTUuNTNWMzYuODRoN3YtNy4yaC03di05LjUzYTkuNTMgOS41MyAwIDAgMC05LjU0IDkuNTN6bTEwMC4xIDB2MTIuOTJjMCA0LjQ0LjkgNy40NiAyLjcgOS4zMmExMC40MiAxMC40MiAwIDAgMCA3LjM5IDIuNyAyMC42IDIwLjYgMCAwIDAgNi4zLS44NGwtLjA3LTcuMzlhMTEuODggMTEuODggMCAwIDEtMi44OS4yNmMtMi44OSAwLTMuODYtMS43NC0zLjg2LTUuNTNWMzYuODRoN3YtNy4yaC03di05LjUzYTkuNTMgOS41MyAwIDAgMC05LjU0IDkuNTN6bS03OC4zNiAxNS43NWExOS4wOSAxOS4wOSAwIDAgMCA4LjQyIDIuMzFjMyAwIDQuMTgtMSA0LjE4LTIuNTdzLTEtMi40NS00LjU3LTMuNjdjLTYuNTYtMi4xMi05LjA3LTUuNzItOS05LjM4IDAtNS45MiA1LTEwLjM1IDEyLjc5LTEwLjM1YTIwLjY1IDIwLjY1IDAgMCAxIDguODEgMS44NmwtMS42NyA2LjY5YTE2LjcyIDE2LjcyIDAgMCAwLTYuODItMS43NGMtMi4zOCAwLTMuNzIgMS0zLjcyIDIuNTFzMS4yMiAyLjMyIDUuMDggMy42N2M2IDIgOC40MiA1LjA3IDguNDkgOS42NCAwIDUuOTItNC41NiAxMC4yMi0xMy41NiAxMC4yMmEyMi4yMSAyMi4yMSAwIDAgMS0xMC4xNi0yLjI1em01NS4zLTEuNTljMCA0LjExLjEzIDcuNDYuMjYgMTAuMDlIMjU5bC0uNDUtNC40NGgtLjE5YTExLjIxIDExLjIxIDAgMCAxLTkuODMgNS4xNGMtNi40MyAwLTExLjA2LTQtMTEuMDYtMTMuNjlWMjkuNjRoOS43N3YxNi45MWMwIDQuNTYgMS40OCA3LjMyIDUgNy4zMmE1LjQyIDUuNDIgMCAwIDAgNS4yNy01LjUzdi0xOC43aDkuNzd6bTYuNjgtMjEuMzZoOS43OHYzMS40NGgtOS43OHptNC44My00LjEyYTUuMTIgNS4xMiAwIDAgMS01LjQtNS4yMWMwLTMgMi4xOS01LjIxIDUuNTMtNS4yMWE1LjIyIDUuMjIgMCAxIDEtLjA2IDEwLjQyem01MS45NiAxNi4yYzAtMi4zMS0xLTYuMzctNS40Ny02LjM3LTQuMTggMC01Ljg1IDMuNzktNi4xMSA2LjM3em0tMTEuNTEgNi42OWMuMzIgNC4xMiA0LjMxIDYgOC44NyA2YTI1LjkgMjUuOSAwIDAgMCA4LjY4LTEuMzVsMS4yNSA2LjY3YTI5Ljc3IDI5Ljc3IDAgMCAxLTExLjM4IDJjLTEwLjY3IDAtMTYuNzgtNi4xNy0xNi43OC0xNi4wNyAwLTggNS0xNi43OCAxNS44OC0xNi43OCAxMC4xNiAwIDE0IDcuOTEgMTQgMTUuNjlhMjUuMjQgMjUuMjQgMCAwIDEtLjMyIDMuOTJ6TTQzLjkyIDguMzJhMjUuMjMgMjUuMjMgMCAwIDAtMjUuMzMgMEEyNSAyNSAwIDAgMCA2IDV2MjUuMjNhNTAuNTEgNTAuNTEgMCAwIDAgNTAuNTEgNTAuNTJWNWEyNSAyNSAwIDAgMC0xMi41OSAzLjMyeiIvPjxwYXRoIGQ9Ik00Mi4xMyAxNC4xMWExMC44MyAxMC44MyAwIDAgMC0xMC44MSA5Ljg0di0uMDcuMDdhMTAuODUgMTAuODUgMCAxIDAtNSAxMC4xbDUgNS4wNiA1LjA3LTVhMTAuODMgMTAuODMgMCAxIDAgNS44NC0yMHptLTIxLjcxIDE4QTcuMjIgNy4yMiAwIDEgMSAyMi41OSAxOGEzLjYxIDMuNjEgMCAxIDAgNC43NSA0Ljc4IDcuMjMgNy4yMyAwIDAgMS02LjkzIDkuMzR6bTIxLjY2LjA2YTcuMjIgNy4yMiAwIDAgMS02Ljg3LTkuMzdBMy42MSAzLjYxIDAgMSAwIDQwIDE4YTcuMjIgNy4yMiAwIDEgMSAyLjEgMTQuMTJ6IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM0NC4xOCAzNS4xNGE1LjcgNS43IDAgMCAxIC43Ny0yLjg4IDUuNjIgNS42MiAwIDAgMSAyLjExLTIuMTIgNS43OCA1Ljc4IDAgMCAxIDUuNzcgMCA1LjYzIDUuNjMgMCAwIDEgMi4xMiAyLjExIDUuNzcgNS43NyAwIDEgMS0xMC43NiAyLjg5em0uODEgMGE1IDUgMCAwIDAgNSA1IDQuODIgNC44MiAwIDAgMCAyLjQ4LS42NyA1IDUgMCAwIDAgMS44MS0xLjgxIDQuOTQgNC45NCAwIDAgMCAwLTUgNSA1IDAgMCAwLTEuODEtMS44MSA0Ljk0IDQuOTQgMCAwIDAtNSAwIDUgNSAwIDAgMC0xLjgxIDEuODEgNC44MSA0LjgxIDAgMCAwLS42NiAyLjQ4em03LjMtMS40YTEuODYgMS44NiAwIDAgMS0uMzMgMS4wOCAxLjkzIDEuOTMgMCAwIDEtLjkyLjdsMS44MiAzaC0xLjI5TDM1MCAzNS44NWgtMXYyLjcxaC0xLjEzdi02LjgzaDJhMi44OCAyLjg4IDAgMCAxIDEuODcuNSAxLjg3IDEuODcgMCAwIDEgLjU0IDEuNTF6TTM0OSAzNC45aC44M2ExLjQ2IDEuNDYgMCAwIDAgMS0uMzIgMSAxIDAgMCAwIC4zNy0uODEgMSAxIDAgMCAwLS4zMy0uODIgMS43NCAxLjc0IDAgMCAwLTEtLjI1SDM0OXoiLz48L3N2Zz4=);
+
+    background-size: 100% 100%;
+    display: block;
+    border: 0;
+    text-indent: -999px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+.nav-custom-link {
+	font-size: 12px;
+	font-weight: 400;
+	letter-spacing: .05em;
+	margin-top: 5px;
+}
+
+.navbar a {
+	color: #53627C !important;
+}
+
+.nav-right {
+	float: right;
+}
+
+/* ==============================================
+   3. Buttons
+===============================================*/
+
+.btn {
+	font-size: 14px;
+	font-weight: 400;
+	border-radius: 3px!important;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.05), 0 1px 2px 0 rgba(0,0,0,.08);
+}
+
+.btn:hover {
+	text-decoration: none;
+}
+
+.btn-regular {
+	background-color: #0095f7;
+	color: #ffffff;
+	padding: 10px 25px;
+	letter-spacing: .1em;
+	margin-top: 25px;
+	display: inline-block;
+}
+
+.btn-regular:hover {
+	background-color: #0191f0;
+	color: #ffffff;
+}
+
+.btn-demo {
+	color: #ffffff;
+	background-color: #6772e5;
+	letter-spacing: .1em;
+	padding: 15px 48px;
+	display: inline-block;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.btn-demo:hover {
+	color: #ffffff;
+	background-color: #636ee1;
+}
+
+.btn-demo-small {
+	font-size: 12px;
+	background-color: #6772e5;
+	padding: 1px 4px;
+}
+
+.btn-demo-small:hover {
+	background-color: #636ee1;
+}
+
+.btn-demo-small a {
+	color: #ffffff!important;
+}
+
+.btn-buy {
+	color: #ffffff;
+	background-color: #0095f7;
+	letter-spacing: .1em;
+	padding: 15px 48px;
+	display: inline-block;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.btn-buy:hover {
+	background-color: #0191f0;
+	color: #ffffff;
+}
+
+/* ==============================================
+   4. Hero
+===============================================*/
+
+#hero {
+    height:390px;
+	background-color: #143059;
+}
+
+#hero h1 {
+    position: relative;
+    top: -20px;
+    margin-bottom: 1.2rem;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 60px;
+    color: #fff6e8;
+    
+}
+
+#hero p {
+	font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+#hero span {
+    position: relative;
+    top: 0px;
+	margin-bottom: 1.2rem;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 60px;
+    color: #fff6e8;
+	margin-top: 0;
+}
+
+#hero .h_img {
+    position: relative;
+    top: 20px;
+}
+#hero .h_img1 {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/* ==============================================
+   5. Marketing
+===============================================*/
+
+#marketing {
+    height:540px;
+	background-color: #FFFFFF;
+}
+
+#marketing p {
+    display: block;
+    font-size:17px;
+    margin: 0 0 1.2rem;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+#marketing span {
+	margin-bottom: 1.2rem;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 2.3rem;
+	color: #241f21;
+	letter-spacing: .05em;
+}
+#marketing h2 {
+    margin-bottom: 1.2rem;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 2.3rem;
+    color: #241F21;
+}
+.content-box {
+	padding: 60px 20px;
+}
+#marketing  .demorequest_title {
+    position: relative;
+    top:-170px;
+    left:320px;
+    color: #FFFFFE;
+}
+#marketing .cont {
+    position: relative;
+    top: -250px;
+    left:150px;
+    background-color: #FFFFFE;
+    box-sizing: border-box;
+    display:block;
+}
+
+
+/* Style inputs, select elements and textareas */
+#marketing input[type=text], select, textarea{
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    /*border-radius: 4px; */
+    box-sizing: border-box;
+    resize: vertical;
+
+  }
+  
+  /* Style the label to display next to the inputs */
+  #marketing label {
+    padding: 8px 8px 12px 6px;
+    display: inline-block;
+    color: black;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    font-size: .8rem;
+    font-weight: 900;
+    
+  }
+  
+  /* Style the submit button */
+  #marketing input[type=submit] {
+    background-color: #28863E;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+   
+    cursor: pointer;
+    position:relative;
+    transition: .5s ease;
+    left: 40%;
+    width: 300px;
+    
+  }
+  
+  /* Style the container */
+  #marketing .cont {
+    border-radius: 0px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    width: 520px;
+    box-shadow: 2px 2px 2px 2px grey;
+  }
+  /*Titutlli request a demo */
+ #marketing .demorequest_title {
+    background-color: #2F6B9A;
+    padding: 30px 30px 30px 190px;
+    position: relative;
+    top:-210px;
+    left:150px;
+    width: 520px;
+ }
+  /* Floating column for labels: 25% width */
+  #marketing .col-25 {
+    float: right;
+    width: 40%;
+    margin-top: 5px;
+  }
+  
+  
+  /* Floating column for inputs: 75% width */
+  #marketing.col-75 {
+    float: right;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  #marketing .row:after {
+    content: "";
+    display: table;
+    
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+   
+  
+ /* hootsuite */
+ #hootsuite {
+    height:350px;
+	background-color: #143059;
+	border-top: 1px solid #EEEBE8;
+	border-bottom: 1px solid #EEEBE8;
+} 
+#hootsuite .hoot {
+    color: #ffffff;
+    margin-bottom: 2.4rem;
+    text-align: center;
+    font-weight: 700;
+    padding:0px 60px 0px 60px;
+    font-size:36px;
+}
+.logo-bar__logos {
+    text-align: center;
+    margin: -.9rem -.75rem 0;
+}
+/* ==============================================
+
+
+
+   6. Testimonials
+===============================================*/
+#testimonials .blockquote_name {
+    
+    color: #241f21;
+
+    text-align: center;
+ 
+    font-size: 20px;
+    margin: 0 auto;
+   line-height: 27px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+}
+#testimonials .blockquote__quote {
+    letter-spacing: -.03em;
+    color: #241F21;
+    margin: 0 auto;
+    font-size: 35px;
+    text-align: center;
+    font-style: bold;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 43.2px;
+    display:block;
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+}
+#testimonials {
+    height:400px;
+	background-color: #EEEBE8;
+	border-top: 1px solid #EEEBE8;
+	border-bottom: 1px solid #EEEBE8;
+}
+
+
+
+
+
+.rating {
+	background-color: #0095f7;
+	padding: 2px 12px;
+	border-radius: 50px;
+}
+
+
+/* ==============================================
+   7. Pricing
+===============================================*/
+
+/* ==============================================
+   8. Call to Action
+===============================================*/
+
+
+
+/* ==============================================
+   9. Footer
+===============================================*/
+
+footer {
+	background-color: #241F21;
+    padding: 60px 0;
+    color: #62656a;
+}
+
+
+
+
+footer a {
+    color: #FFFFFE;
+    
+}
+
+footer a:hover {
+	color: #0095f7;
+	text-decoration: none;
+}
+
+footer i {
+	font-size: 25px;
+	color: #62656a;
+	margin-right: 10px;
+}
+
+footer i:hover {
+	color: #0095f7;
+}
+
+footer small {
+	color: #62656a;
+	float: right;
+}
+
+.external-links {
+	color: #0095f7;
+}
+footer .site-footer__utils__ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: .8rem;
+    color: #FFFFFE;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+footer .lang {
+    width: 400px;
+    height: 30px;
+    background-color:#241F21;
+    color: #FFFFFE;
+}
+footer .android {
+    background-image:url("data:image/png;base64,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");
+    display: block;
+    border: 0;
+    text-indent: 10000px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    width: 113px;
+    height: 34px;
+    display: inline-block;
+}
+footer .apple {
+    background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHEAAAAiCAMAAABfusa7AAAA21BMVEUAAACvr6+zs7Oqqqqrq6upqamsrKyrq6uqqqqpqamoq6iqqqqpq6moqqioqqipqamoqaipqamoqqioqqipqqmNjo2MjoybnZubnJt7fHuHiIeHiIcAAAAKCgoLCwsQEBAfHx8gICAhISEqKiowMDAyMjI0NTQ+Pj4/Pz9AQEBDQ0NPT09QUFBUVVRVVVVdXV1fX19gYGBvb29wcHB0dHR8fHx+f35/f39/gH+AgH+Pj46QkI+fn56goJ+vr66wsK+/v77AwL/Pz87Q0M/f397g4N/v7+7w8O////6Ggj6RAAAAHHRSTlMAEBQwRlBQWFpfcHh/kJ+goa+wv8DFxtLT7vLzlfzM0QAAAwpJREFUSMe9l1t74zQQhrscl8PCctwFvlYMCMi0BqyaEqaqI00c2/P/fxEXTlIn3WzCsu53oceSbL3WaDQanZ2t9eTTr/6ZTN9/8dHZvt59wZhQF398tk98QZhW/GwX+OEMU+uvd3aIzy8mJ/763g7xm8mB+PmDHeJ30xMvjhHDyHdlPnd73b/8Oar4sNvpEfxD5NPXEl02ua81XDRA4eFBzpGnEpc38KUDlQR3FQQAlQTvrwD4JUmx7hzpk9cSo9nobQVqX1cxRJ8qYZVYXd5wKhQ1N9AQBSDlBiopAL4hSVVyWujpRLOxoRRI1IBSEWJMULBc3ghDIbGFggVggfDwCIUwlFUSnUysdyJQMysViaVCW8R6TeTaKxq/QirmAlDy6tbEhoShlOj6lDn6bLYoy4VZN996jgQHJxUQwIwA4p9+QxCPogogKRhAIR4BxAACMyGAhU8g+s7uFd/q9jhAbEfA1j0CkUfAsfNwrg6O5O9yvnZvSpQxcexJ1h0aqLA2Jls68PxtEvvaigMDNa0D2ALE/jfxPlIFo7YGECPnPAd85ru8GPptCQBMYWU5wM1znjtAq0UE3eVcHCEWY+Ld9uXUIHYO0FUfa8tg61LsOxoMnksCwGrCaPoo/RIw04q6Rka2eTXRjYl2u22t4C0AagzU5tlqgIfd42JvtiwAMSBYGAqrgbp3gK6O7I60g6SNUcvZrEuA9gDYCjYG0G7CJsfeCohhvZYmMAG0yzmv7AhxZ3tsRmyGqht+mC3sEQGy9ApiKyIix6Jceug6ZBGAtwpqBIh5Ntk0D6WzGmIOwXhwXBMgrQDQ7BjRNQ8iQDWg2yW0b69vTcHW314vB6Or3V2VS2MEuyW0XVl2LWACeFvMyi4dPTsotTVz0GYbZdpmfWaSamj75MBWqTVDnHbSmykDLpmAUt8nGohgtT66006rA1LdrPYb5NNPH5t4vptZfXvaV2G9tCT/PYXfyx6fnz92hvz4t4Czlz9ODJw927/NvZx0lue/f/7gAvnk46//nkw/fPn+FvQvdmfjfXRNOJoAAAAASUVORK5CYII=");
+        display: block;
+        border: 0;
+        text-indent: 10000px;
+        white-space: nowrap;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        width: 113px;
+        height: 34px;
+        display: inline-block;
+    }
+
+
+/* ==============================================
+   9. Media Queries
+===============================================*/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+	h2 {
+		font-size: 34px!important;
+		margin-bottom: 20px;
+		line-height: 1.6;
+	}
+	.title-block h2, p {
+		text-align: left;
+		padding: 0px 20px;
+	}
+
+	#call-to-action h2, p {
+		text-align: left!important;
+		padding: 0 20px;
+	}
+
+	#call-to-action {
+		background-image: none;
+		background-color: #0095f7;
+	}
+
+	footer {
+		padding: 60px 25px;
+	}
+	footer h5 {
+		font-size: 18px;
+		margin-top: 30px;
+	}
+	footer li {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	footer p {
+		font-size: 16px;
+	}
+	footer i {
+		font-size: 30px;
+		margin-right: 20px;
+	}
+	footer small {
+		float: left;
+		margin-top: 20px;
+	}
+}
+
+@media (max-width: 400px) { 
+	#hero h1 {
+		font-size: 34px!important;
+		margin-bottom: 20px;
+	}
+	#hero p {
+		font-size: 20px!important;
+	}
+}
+
+@media (max-width: 991px) { 
+	.nav-right {
+		float: left;
+	}
+	.nav-custom-link {
+		border-bottom: 1px solid #EEE;
+	}
+	.navbar-nav{
+		width: 100%;
+	}
+	.navbar-nav .nav-link {
+		padding: 20px 0;
+		text-align: left;
+	}
+
+	.btn-demo-small {
+		background-color: #ffffff;
+		border: 0px;
+		padding: 0px;
+		box-shadow: none;
+
+	}
+	.btn-demo-small:hover {
+		background-color: #ffffff;
+		border: 0px;
+		padding: 0px;
+		box-shadow: none;
+
+	}
+	.btn-demo-small a {
+		color: #53627C!important;
+	}
+	.nav-custom-link {
+		font-size: 13px;
+	}
+
+	.icon-mobile {
+		font-size: 18px;
+		float: right;
+	}
+
+	.navbar-collapse {
+		border-bottom: 1px solid #efefef;
+	}
+
+	.nav-logo-mobile {
+		margin: auto;
+		padding-right: 50px;
+	}
+
+	.nav-logo-desktop {
+        display: none;
+       
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.icon-mobile {
+		display: none;
+	}
+	.nav-logo-mobile {
+		display: none;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	.hero-content {
+		margin-top: 1px;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.pricing-box h3 {
+		font-size: 17px;
+	}
+	.pricing-box p {
+		font-size: 14px;
+	}
+	.pricing-box li {
+		font-size: 12px;
+	}
+	.btn-buy {
+		font-size: 12px;
+		padding: 15px 20px;
+	}
+	.btn-demo {
+		font-size: 12px;
+		padding: 15px 20px;
+	}
+	.profile-picture {
+		width: 50px;
+		height: 50px;
+	}
+	.testimonial-box h6 {
+		font-size: 14px;
+		margin-left: 10px;
+	}
+	.testimonial-box span {
+		font-size: 12px;
+	}
+	.testimonial-box small {
+		font-size: 12px;
+		margin-top: 4px;
+		margin-left: 10px;
+	}
+}
+
+.nav-logo-desktop {
+    height: 60px;
+    width: 125px;
+    position: absolute;
+    top: 20px;
+    margin: 4px 32px 0 0;
+    z-index: 5;
+    font-size: 1em;
+    background-color: #143059;
+}
