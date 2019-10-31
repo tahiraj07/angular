@@ -25,3 +25,14 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+
+PROJEKTI ANGULAR : 
+1-https://www.youtube.com/watch?v=LYmJOdCuXrs 
+2-Instalimi i angular ne file npm install -g @angular/cli  
+3-Shkarkimi i nje faqe tempalte ne HTML 
+4-Kopjimi nga template(HTML) index.html tek file i webiste index.html 
+4-Kopjimi i style.css nga template tek style.css i website
+5-NAVBAR Behet koment ne index.html
